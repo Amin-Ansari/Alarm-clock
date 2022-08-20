@@ -53,7 +53,7 @@ body {
   font-weight: 500;
   padding: 3px 7px;
 }
-button {
+.set-button {
   border: none;
   outline: none;
   background: #55d8c1;
@@ -66,4 +66,26 @@ button {
 }
 .ringin-animation {
   animation: ringing 0.8s ease-in-out 0s infinite normal forwards;
+}
+.add-container {
+  display: flex;
+  justify-content: center;
+}
+.add-alarm-time {
+  background: #55d8c1;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 100px;
+  margin: 10px 0px;
+  transition: all 0.3s;
+}
+.add-alarm-time::before {
+  content: "\2b";
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.8em;
+  color: #fff;
+  text-align: center;
 }
