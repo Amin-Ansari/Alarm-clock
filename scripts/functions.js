@@ -18,6 +18,34 @@ function ifOddIfEven(givvenNumber) {
     return givvenNumber;
   }
 }
-
+function fillTheSelectElements() {
+  for (let element of selectElements) {
+    if (element.id == "hour") {
+      for (let i = 1; i <= 24; i++) {
+        if (i <= 9) {
+          var theHourOption = `<option value="0${i}">0${i}</option>`;
+          element.insertAdjacentHTML(
+            "beforeend",
+            `<option value="0${i}">0${i}</option>`
+          );
+        } else {
+          var theHourOption = `<option value="${i}">${i}</option>`;
+          element.insertAdjacentHTML("beforeend", theHourOption);
+        }
+      }
+    } else {
+      for (let i = 0; i <= 60; i++) {
+        if (i <= 9) {
+          var theHourOption = ` <option value="0${i}">0${i}</option>`;
+          element.insertAdjacentHTML("beforeend", theHourOption);
+        } else {
+          var theHourOption = ` <option value="${i}">${i}</option>`;
+          element.insertAdjacentHTML("beforeend", theHourOption);
+        }
+      }
+    }
+  }
+}
 showtheTime();
+fillTheSelectElements();
 setInterval(showtheTime, 1000);
