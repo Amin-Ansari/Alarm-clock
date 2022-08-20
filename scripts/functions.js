@@ -22,7 +22,7 @@ function fillTheSelectElements() {
   const selectElements = document.querySelectorAll("select");
   for (let element of selectElements) {
     if (element.id == "hour") {
-      for (let i = 1; i <= 24; i++) {
+      for (let i = 0; i <= 23; i++) {
         if (i <= 9) {
           var theHourOption = `<option value="0${i}">0${i}</option>`;
           element.insertAdjacentHTML(
@@ -47,11 +47,6 @@ function fillTheSelectElements() {
     }
   }
 }
-function addAnotherTime() {
-  var alarmTimeContainer = document.querySelector(".alarm-time-container");
-  alarmTimeContainer.insertAdjacentHTML("beforeend", formCreator());
-  fillTheSelectElements();
-}
 function formCreator() {
   var timeForm = ` <form class="alarm-times" action="javascript:void(0)" method="post">
     <select name="alarm-time-selector" id="hour">
@@ -63,6 +58,7 @@ function formCreator() {
   </form>`;
   return timeForm;
 }
+function checkTheTime() {}
+
 showtheTime();
 fillTheSelectElements();
-setInterval(showtheTime, 1000);
