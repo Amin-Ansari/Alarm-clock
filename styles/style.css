@@ -89,3 +89,6 @@ body {
   color: #fff;
   text-align: center;
 }
+.disabled {
+  opacity: 0.5;
+}

@@ -19,7 +19,6 @@ function ifOddIfEven(givvenNumber) {
   }
 }
 function fillTheSelectElements() {
-  const selectElements = document.querySelectorAll("select");
   for (let element of selectElements) {
     if (element.id == "hour") {
       for (let i = 0; i <= 23; i++) {
@@ -59,6 +58,18 @@ function formCreator() {
   return timeForm;
 }
 function checkTheTime() {}
+function setTheTime() {
+  for (let element of selectElements) {
+    if (element.value == "unselected") {
+      return;
+    } else {
+      element.disabled = true;
+      if (!element.classList.contains("disabled")) {
+        element.classList.add("disabled");
+      }
+    }
+  }
+}
 
 showtheTime();
 fillTheSelectElements();
