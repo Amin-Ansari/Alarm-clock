@@ -62,4 +62,8 @@ button {
   border-radius: 8px;
   padding: 10px 0px;
   margin: 20px 0px 0px;
+  transition: all 0.3s;
+}
+.ringin-animation {
+  animation: ringing 0.8s ease-in-out 0s infinite normal forwards;
 }

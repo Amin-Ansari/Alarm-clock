@@ -1,0 +1,53 @@
+@keyframes ringing {
+  0% {
+    transform: scale(1) rotateZ(0deg);
+  }
+  10% {
+    transform: scale(1.03) rotateZ(0deg);
+  }
+  11% {
+    transform: scale(1.03) rotateZ(10deg);
+  }
+  13% {
+    transform: scale(1.03) rotateZ(0deg);
+  }
+  18% {
+    transform: scale(1.03) rotateZ(-10deg);
+  }
+  23% {
+    transform: scale(1.03) rotateZ(0deg);
+  }
+  28% {
+    transform: scale(1.03) rotateZ(10deg);
+  }
+  33% {
+    transform: scale(1.03) rotateZ(0deg);
+  }
+  38% {
+    transform: scale(1.03) rotateZ(-10deg);
+  }
+  43% {
+    transform: scale(1.03) rotateZ(0deg);
+  }
+  48% {
+    transform: scale(1.03) rotateZ(10deg);
+  }
+  53% {
+    transform: scale(1.03) rotateZ(0deg);
+  }
+  58% {
+    transform: scale(1.03) rotateZ(-10deg);
+  }
+  63% {
+    transform: scale(1.03) rotateZ(0deg);
+  }
+  68% {
+    transform: scale(1.03) rotateZ(10deg);
+  }
+  73% {
+    transform: scale(1.03) rotateZ(0deg);
+  }
+  100% {
+    transform: scale(1) rotateZ(0deg);
+  }
+}
