@@ -62,6 +62,7 @@ function setTheTime() {
   if (theButton.innerHTML == "Set the alarm") {
     for (let element of selectElements) {
       if (element.value == "unselected") {
+        alert("لطفا هم ساعت و هم دقیقه را انتخاب  کنید.");
         return;
       } else {
         element.disabled = true;
