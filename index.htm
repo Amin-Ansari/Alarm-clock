@@ -25,11 +25,14 @@
         <p class="current-time">20:00:00</p>
       </div>
       <div class="alarm-time-container">
-        <form
-          class="alarm-times"
-          action="javascript:void(0)"
-          method="post"
-        ></form>
+        <form class="alarm-times" action="javascript:void(0)" method="post">
+          <select name="alarm-time-selector" id="hour">
+            <option value="unselected">Hour</option>
+          </select>
+          <select name="alarm-time-selector" id="minute">
+            <option value="unselected">Minute</option>
+          </select>
+        </form>
       </div>
       <button type="button">Set the alarm</button>
     </div>
