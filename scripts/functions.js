@@ -19,6 +19,7 @@ function ifOddIfEven(givvenNumber) {
   }
 }
 function fillTheSelectElements() {
+  const selectElements = document.querySelectorAll("select");
   for (let element of selectElements) {
     if (element.id == "hour") {
       for (let i = 1; i <= 24; i++) {
@@ -45,6 +46,22 @@ function fillTheSelectElements() {
       }
     }
   }
+}
+function addAnotherTime() {
+  var alarmTimeContainer = document.querySelector(".alarm-time-container");
+  alarmTimeContainer.insertAdjacentHTML("beforeend", formCreator());
+  fillTheSelectElements();
+}
+function formCreator() {
+  var timeForm = ` <form class="alarm-times" action="javascript:void(0)" method="post">
+    <select name="alarm-time-selector" id="hour">
+      <option value="unselected" selected hidden>Hour</option>
+    </select>
+    <select name="alarm-time-selector" id="minute">
+      <option value="unselected" selected hidden>Minute</option>
+    </select>
+  </form>`;
+  return timeForm;
 }
 showtheTime();
 fillTheSelectElements();
