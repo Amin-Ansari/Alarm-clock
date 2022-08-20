@@ -81,6 +81,8 @@ function setTheTime() {
         element.classList.remove("disabled");
         theButton.innerHTML = "Set the alarm";
         clockImage.classList.remove("ringin-animation");
+        ringtone.pause();
+        ringtone.loop = false;
       }
     }
   }
@@ -90,6 +92,8 @@ function checkTheTime() {
   let timeList = takeTime();
   if (timeList[0] == ongingTime.getHours()) {
     if (timeList[1] == ongingTime.getMinutes()) {
+      ringtone.play();
+      ringtone.loop = true;
       return true;
     }
   }
