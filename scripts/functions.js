@@ -59,17 +59,48 @@ function formCreator() {
 }
 function checkTheTime() {}
 function setTheTime() {
-  for (let element of selectElements) {
-    if (element.value == "unselected") {
-      return;
-    } else {
-      element.disabled = true;
-      if (!element.classList.contains("disabled")) {
-        element.classList.add("disabled");
+  if (theButton.innerHTML == "Set the alarm") {
+    for (let element of selectElements) {
+      if (element.value == "unselected") {
+        return;
+      } else {
+        element.disabled = true;
+        if (!element.classList.contains("disabled")) {
+          element.classList.add("disabled");
+        }
+        theButton.innerHTML = "Clear the alarm";
+      }
+    }
+  } else {
+    for (let element of selectElements) {
+      if (element.value == "unselected") {
+        return;
+      } else {
+        element.disabled = false;
+        element.classList.remove("disabled");
+        theButton.innerHTML = "Set the alarm";
+        clockImage.classList.remove("ringin-animation");
       }
     }
   }
 }
-
+function checkTheTime() {
+  var ongingTime = new Date();
+  let timeList = takeTime();
+  if (timeList[0] == ongingTime.getHours()) {
+    if (timeList[1] == ongingTime.getMinutes()) {
+      return true;
+    }
+  }
+}
+function takeTime() {
+  var list = [];
+  for (let element of selectElements) {
+    if (element.disabled == true) {
+      list.push(element.value);
+    }
+  }
+  return list;
+}
 showtheTime();
 fillTheSelectElements();
