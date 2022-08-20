@@ -82,7 +82,6 @@ function setTheTime() {
         theButton.innerHTML = "Set the alarm";
         clockImage.classList.remove("ringin-animation");
         ringtone.pause();
-        ringtone.loop = false;
       }
     }
   }

@@ -1,53 +1,35 @@
 @keyframes ringing {
   0% {
-    transform: scale(1) rotateZ(0deg);
-  }
-  10% {
-    transform: scale(1.03) rotateZ(0deg);
-  }
-  11% {
-    transform: scale(1.03) rotateZ(10deg);
+    transform: rotateZ(0deg);
   }
   13% {
-    transform: scale(1.03) rotateZ(0deg);
+    transform: rotateZ(13deg);
   }
-  18% {
-    transform: scale(1.03) rotateZ(-10deg);
+  20% {
+    transform: rotateZ(0deg);
   }
-  23% {
-    transform: scale(1.03) rotateZ(0deg);
+  30% {
+    transform: rotateZ(-13deg);
   }
-  28% {
-    transform: scale(1.03) rotateZ(10deg);
+  40% {
+    transform: rotateZ(0deg);
   }
-  33% {
-    transform: scale(1.03) rotateZ(0deg);
+  50% {
+    transform: rotateZ(13deg);
   }
-  38% {
-    transform: scale(1.03) rotateZ(-10deg);
+  60% {
+    transform: rotateZ(0deg);
   }
-  43% {
-    transform: scale(1.03) rotateZ(0deg);
+  70% {
+    transform: rotateZ(-13deg);
   }
-  48% {
-    transform: scale(1.03) rotateZ(10deg);
+  80% {
+    transform: rotateZ(0deg);
   }
-  53% {
-    transform: scale(1.03) rotateZ(0deg);
+  90% {
+    transform: rotateZ(13deg);
   }
-  58% {
-    transform: scale(1.03) rotateZ(-10deg);
-  }
-  63% {
-    transform: scale(1.03) rotateZ(0deg);
-  }
-  68% {
-    transform: scale(1.03) rotateZ(10deg);
-  }
-  73% {
-    transform: scale(1.03) rotateZ(0deg);
-  }
-  100% {
-    transform: scale(1) rotateZ(0deg);
+  130% {
+    transform: rotateZ(0deg);
   }
 }
